@@ -7,10 +7,9 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const session = supabase.auth.getSession().then(res => {
+    supabase.auth.getSession().then(res => {
       if (res.data.session) setUser(res.data.session.user);
     });
-
     supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
     });
