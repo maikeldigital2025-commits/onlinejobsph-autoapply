@@ -5,7 +5,6 @@ export default function Dashboard({ user }) {
   const [jobs, setJobs] = useState([]);
 
   const searchJobs = () => {
-    // Mock jobs response
     const mockJobs = [
       { id: 1, title: 'React Developer', company: 'ABC Tech' },
       { id: 2, title: 'PHP Backend Developer', company: 'XYZ Solutions' },
@@ -17,7 +16,6 @@ export default function Dashboard({ user }) {
   };
 
   const generateCoverLetter = (job) => {
-    // Mock AI cover letter generation
     return `Dear ${job.company}, I am very interested in the ${job.title} position. My skills include ${skills}. Looking forward to contributing!`;
   };
 
